@@ -9,6 +9,8 @@ public interface ClienteService {
 
     Cliente saveCliente(Cliente client);
 
+    public Optional<Cliente> findByEmail(String email);
+
     List<Cliente> getAllClientes();
 
     Optional<Cliente> getClienteById(long id);

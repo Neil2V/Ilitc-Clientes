@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Setter
 @Getter
@@ -34,7 +35,8 @@ public class Cliente {
     private SexoEnum sexo;
 
     @NotBlank
-    private String fechaNacimiento;
+    @Temporal(TemporalType.DATE)
+    private Date fechaNacimiento;
 
     @NotBlank
     private String direccion;

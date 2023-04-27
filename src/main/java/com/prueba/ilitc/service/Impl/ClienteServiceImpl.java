@@ -15,6 +15,10 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Autowired
     private ClienteRepository clienteRepository;
+
+    public Optional<Cliente> findByEmail(String email){
+        return clienteRepository.findByEmail(email);
+    };
     @Override
     public Cliente saveCliente(Cliente client) {
         return clienteRepository.save(client);
@@ -47,5 +51,6 @@ public class ClienteServiceImpl implements ClienteService {
     public boolean existsById(Long id){
         return clienteRepository.existsById(id);
     }
+
 
 }
